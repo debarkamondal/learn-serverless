@@ -1,0 +1,14 @@
+{
+	"main": "src/index.ts",
+	"scripts": {
+		"package": "tsc -p . && serverless package",
+		"deploy": "tsc -p . && serverless deploy"
+	},
+	"devDependencies": {
+		"@types/aws-lambda": "^8.10.121",
+		"@types/node": "^20.6.2",
+		"esbuild": "^0.19.3",
+		"serverless-esbuild": "^1.48.0",
+		"typescript": "^5.2.2"
+	}
+}

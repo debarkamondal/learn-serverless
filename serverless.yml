@@ -1,0 +1,25 @@
+service: cafegent-backend
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+package:
+  patterns:
+    - '!./**/*.ts'
+    - '!./node_modules'
+
+functions:
+  function1:
+    handler: src/index.handler
+    events:
+      - httpApi:
+          path: /
+          method: GET
+    layers:
+      - {Ref: GenidLambdaLayer}
+
+layers:
+  Genid:
+    path: "layers"

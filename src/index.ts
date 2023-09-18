@@ -9,7 +9,7 @@ module.exports.handler = async (
 		statusCode: 200,
 		body: JSON.stringify(
 			{
-				message: id,
+				message: `This is a new id: ${id}`,
 				input: event,
 			},
 			null,
@@ -17,4 +17,3 @@ module.exports.handler = async (
 		),
 	};
 };
-

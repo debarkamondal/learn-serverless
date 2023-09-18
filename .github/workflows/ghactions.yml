@@ -11,11 +11,12 @@ jobs:
       - name: Install node
         uses: actions/setup-node@v3
         with:
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
-        run_install: false
+        with:
+          run_install: false
 
       - name: Install dependencies
         run: pnpm install

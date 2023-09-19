@@ -9,7 +9,7 @@ module.exports.handler = async (
 		statusCode: 200,
 		body: JSON.stringify(
 			{
-				message: `This is a new id: ${id}`,
+				message: `Now CI/CD works too: ${id}`,
 				input: event,
 			},
 			null,
